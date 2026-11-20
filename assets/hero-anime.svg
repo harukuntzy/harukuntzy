@@ -1,0 +1,468 @@
+<svg width="900" height="430" viewBox="0 0 900 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Night Sky Gradient -->
+    <linearGradient id="tokyoSky" x1="0" y1="0" x2="900" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060714"/>
+      <stop offset="50%" stop-color="#111029"/>
+      <stop offset="100%" stop-color="#1c0d1e"/>
+    </linearGradient>
+
+    <!-- Crimson Moon Gradient -->
+    <radialGradient id="crimsonMoon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe4e6"/>
+      <stop offset="45%" stop-color="#fb7185"/>
+      <stop offset="80%" stop-color="#e11d48" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Cyber Emerald & Crimson Ambient Glow -->
+    <radialGradient id="toriiGlow" cx="68%" cy="52%" r="48%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#34d399" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#060714" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hair Gradient (Silver-Emerald Alchemist Vibe) -->
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="55%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Coat Gradient -->
+    <linearGradient id="coatGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <clipPath id="frameClip">
+      <rect x="1" y="1" width="898" height="428" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frameClip)">
+    <!-- Background -->
+    <rect x="0" y="0" width="900" height="430" fill="url(#tokyoSky)"/>
+    <rect x="0" y="0" width="900" height="430" fill="url(#toriiGlow)"/>
+
+    <!-- Twinkling Stars -->
+    <circle cx="120" cy="58" r="1.5" fill="#fff"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="42" r="1.8" fill="#fda4af"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="390" cy="70" r="1.3" fill="#6ee7b7"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="480" cy="36" r="2" fill="#fff"><animate attributeName="opacity" values="1;0.3;1" dur="2.7s" repeatCount="indefinite"/></circle>
+
+    <!-- Giant Pulsing Moon -->
+    <circle cx="645" cy="155" r="128" fill="url(#crimsonMoon)">
+      <animate attributeName="r" values="124;132;124" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="645" cy="155" r="76" fill="#ffe4e6" fill-opacity="0.92"/>
+
+    <!-- Distant Mount Fuji Silhouette -->
+    <path d="M350 370 L525 185 L565 185 L740 370 Z" fill="#0d1126"/>
+    <path d="M525 185 L565 185 L588 212 L572 206 L558 218 L545 204 L531 216 L516 207 Z" fill="#e2e8f0" fill-opacity="0.85"/>
+
+    <!-- Neo-Tokyo Skyline Silhouette -->
+    <g fill="#080b1a">
+      <rect x="380" y="255" width="34" height="120"/>
+      <rect x="422" y="220" width="42" height="155"/>
+      <rect x="472" y="275" width="28" height="100"/>
+      <rect x="755" y="210" width="46" height="165"/>
+      <rect x="810" y="245" width="40" height="130"/>
+    </g>
+    <!-- Neon Building Windows -->
+    <g fill="#34d399" opacity="0.55">
+      <rect x="430" y="232" width="4" height="18"/>
+      <rect x="442" y="232" width="4" height="18"/>
+      <rect x="765" y="225" width="5" height="24" fill="#f43f5e"/>
+      <rect x="778" y="225" width="5" height="24" fill="#f43f5e"/>
+    </g>
+
+    <!-- Traditional Cyber Torii Gate (Midground) -->
+    <g transform="translate(495, 165)">
+      <!-- Pillars -->
+      <rect x="34" y="34" width="14" height="175" fill="#9f1239"/>
+      <rect x="148" y="34" width="14" height="175" fill="#9f1239"/>
+      <!-- Kasagi (Top Curved Beam) -->
+      <path d="M6 18 Q98 30 190 18 L196 32 Q98 44 0 32 Z" fill="#f43f5e"/>
+      <path d="M12 14 Q98 25 184 14 L188 20 Q98 31 8 20 Z" fill="#090d16"/>
+      <!-- Nuki (Second Beam) -->
+      <rect x="18" y="56" width="160" height="11" rx="2" fill="#e11d48"/>
+      <!-- Center Tablet -->
+      <rect x="87" y="32" width="22" height="32" rx="2" fill="#090d16" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="98" y="53" text-anchor="middle" fill="#fbbf24" font-family="serif" font-weight="700" font-size="14">勝</text>
+
+      <!-- Swinging Paper Lantern Left -->
+      <g transform="translate(24, 67)">
+        <animateTransform attributeName="transform" type="rotate" values="-6 0 0; 6 0 0; -6 0 0" dur="3.4s" repeatCount="indefinite"/>
+        <line x1="0" y1="0" x2="0" y2="10" stroke="#fbbf24" stroke-width="1.2"/>
+        <ellipse cx="0" cy="20" rx="8" ry="11" fill="#f43f5e" stroke="#fda4af" stroke-width="1"/>
+        <circle cx="0" cy="20" r="4" fill="#fef08a" opacity="0.8"/>
+      </g>
+
+      <!-- Swinging Paper Lantern Right -->
+      <g transform="translate(172, 67)">
+        <animateTransform attributeName="transform" type="rotate" values="6 0 0; -6 0 0; 6 0 0" dur="3.4s" repeatCount="indefinite"/>
+        <line x1="0" y1="0" x2="0" y2="10" stroke="#fbbf24" stroke-width="1.2"/>
+        <ellipse cx="0" cy="20" rx="8" ry="11" fill="#f43f5e" stroke="#fda4af" stroke-width="1"/>
+        <circle cx="0" cy="20" r="4" fill="#fef08a" opacity="0.8"/>
+      </g>
+    </g>
+
+    <!-- Ground Reflection Water / Cyber Floor -->
+    <rect x="0" y="368" width="900" height="62" fill="#050711"/>
+    <line x1="0" y1="368" x2="900" y2="368" stroke="#f43f5e" stroke-opacity="0.55" stroke-width="1.5"/>
+
+    <!-- ANIMATED ANIME CHARACTER (Foreground Right - Idle Breathing, Blinking, Flowing Scarf) -->
+    <g transform="translate(715, 165)">
+      <animateTransform attributeName="transform" type="translate"
+        values="715,165; 715,158; 715,165" dur="3.2s" repeatCount="indefinite"/>
+
+      <!-- Flowing Crimson Scarf Behind -->
+      <path d="M-18 82 Q-75 74 -118 96 Q-85 114 -20 98 Z" fill="#e11d48">
+        <animate attributeName="d"
+          values="M-18 82 Q-75 74 -118 96 Q-85 114 -20 98 Z;
+                  M-18 82 Q-78 62 -126 78 Q-88 102 -20 98 Z;
+                  M-18 82 Q-75 74 -118 96 Q-85 114 -20 98 Z"
+          dur="2.4s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Tactical Coat & Shoulders -->
+      <path d="M-58 205 L-46 108 Q0 88 46 108 L58 205 Z" fill="url(#coatGrad)" stroke="#34d399" stroke-width="1.4"/>
+      <!-- High Cyber Collar -->
+      <path d="M-32 104 L-22 76 L22 76 L32 104 L0 116 Z" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+      <!-- Glowing Chest Core -->
+      <polygon points="0,124 8,136 0,148 -8,136" fill="#34d399">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="1.6s" repeatCount="indefinite"/>
+      </polygon>
+
+      <!-- Neck & Anime Face -->
+      <rect x="-10" y="64" width="20" height="22" rx="6" fill="#fed7aa"/>
+      <path d="M-28 34 C-28 8 28 8 28 34 C28 56 14 70 0 72 C-14 70 -28 56 -28 34 Z" fill="#ffedd5"/>
+
+      <!-- Anime Eyes (Crimson-Emerald Glow + Blinking) -->
+      <g>
+        <ellipse cx="-11" cy="43" rx="5.5" ry="4" fill="#0f172a"/>
+        <circle cx="-11" cy="43" r="2.8" fill="#f43f5e"/>
+        <circle cx="-12.5" cy="41.5" r="1.1" fill="#ffffff"/>
+
+        <ellipse cx="11" cy="43" rx="5.5" ry="4" fill="#0f172a"/>
+        <circle cx="11" cy="43" r="2.8" fill="#34d399"/>
+        <circle cx="9.5" cy="41.5" r="1.1" fill="#ffffff"/>
+
+        <!-- Eyelid Blink -->
+        <rect x="-18" y="38" width="36" height="10" fill="#ffedd5" opacity="0">
+          <animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0;0.92;0.94;0.96;0.98;1" dur="4.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Confident Smirk -->
+      <path d="M-6 58 Q1 62 8 57" stroke="#9a3412" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+      <!-- Spiky Gravity-Defying Anime Hair -->
+      <path d="M-34 38 L-44 10 L-22 18 L-16 -14 L2 10 L18 -16 L24 14 L46 6 L34 38 L26 24 L12 34 L0 20 L-12 34 L-26 24 Z"
+            fill="url(#hairGrad)" stroke="#064e3b" stroke-width="1.2"/>
+    </g>
+
+    <!-- Floating Holographic Cyber Rings around Character -->
+    <ellipse cx="715" cy="240" rx="92" ry="22" fill="none" stroke="#34d399" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="14 8">
+      <animateTransform attributeName="transform" type="rotate" from="-8 715 240" to="352 715 240" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Vertical Japanese Katakana / Kanji Watermark -->
+    <text x="862" y="85" fill="#f43f5e" fill-opacity="0.45" font-family="serif" font-weight="900" font-size="22" writing-mode="tb">ネオ東京・自動化工学</text>
+
+    <!-- LEFT HUD: Identity & Japanese Cyber Title -->
+    <g transform="translate(38, 42)">
+      <rect x="0" y="0" width="235" height="26" rx="6" fill="#f43f5e" fill-opacity="0.18" stroke="#f43f5e" stroke-opacity="0.6"/>
+      <circle cx="14" cy="13" r="4" fill="#f43f5e">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="17" fill="#fda4af" font-family="monospace" font-weight="700" font-size="11" letter-spacing="1.5">NEO-TOKYO // 勝つために生きる</text>
+
+      <text x="0" y="68" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="38" letter-spacing="1">HARUKUNTZY</text>
+      <text x="2" y="92" fill="#6ee7b7" font-family="monospace" font-weight="700" font-size="13">MUHAMMAD FAKHRUDDIN // @harukuntzy</text>
+
+      <text x="2" y="124" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">Automation Engineering • Full-Stack &amp; Cyber Defense</text>
+      <text x="2" y="144" fill="#94a3b8" font-family="monospace" font-size="11.5">Universitas Negeri Jakarta • Class of 2026</text>
+
+      <!-- Motto Pill -->
+      <rect x="0" y="166" width="295" height="44" rx="10" fill="#090d1a" fill-opacity="0.85" stroke="#34d399" stroke-opacity="0.45"/>
+      <text x="16" y="185" fill="#fbbf24" font-family="serif" font-weight="700" font-size="13">「 人生は勝つためにある 」</text>
+      <text x="16" y="201" fill="#a7f3d0" font-family="monospace" font-size="10.5">MOTTO : HIDUP UNTUK MENANG // READY TO DEPLOY</text>
+    </g>
+
+    <!-- Bottom Left Status Strip -->
+    <text x="38" y="404" fill="#6ee7b7" font-family="monospace" font-size="11">LOC: BEKASI // TOKYO-SECTOR-09</text>
+    <text x="862" y="404" text-anchor="end" fill="#fda4af" font-family="monospace" font-size="11">SAKURA ENGINE v4.0 [ACTIVE]</text>
+
+    <!-- Falling Sakura Petals Layer -->
+    
+        <g transform="translate(0, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="0 -20" to="-70 460"
+            dur="5.5s" begin="-0.00s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="3.8s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(41, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="41 -20" to="-57 460"
+            dur="6.6s" begin="-0.45s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="4.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(82, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="82 -20" to="-44 460"
+            dur="7.7s" begin="-0.90s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="5.4s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(123, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="123 -20" to="-31 460"
+            dur="8.8s" begin="-1.35s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.2s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(164, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="164 -20" to="-18 460"
+            dur="9.9s" begin="-1.80s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.9s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(205, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="205 -20" to="135 460"
+            dur="11.0s" begin="-2.25s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="7.7s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(246, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="246 -20" to="148 460"
+            dur="5.5s" begin="-2.70s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="3.8s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(287, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="287 -20" to="161 460"
+            dur="6.6s" begin="-3.15s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="4.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(328, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="328 -20" to="174 460"
+            dur="7.7s" begin="-3.60s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="5.4s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(369, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="369 -20" to="187 460"
+            dur="8.8s" begin="-4.05s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.2s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(410, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="410 -20" to="340 460"
+            dur="9.9s" begin="-4.50s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.9s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(451, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="451 -20" to="353 460"
+            dur="11.0s" begin="-4.95s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="7.7s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(492, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="492 -20" to="366 460"
+            dur="5.5s" begin="-5.40s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="3.8s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(533, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="533 -20" to="379 460"
+            dur="6.6s" begin="-5.85s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="4.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(574, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="574 -20" to="392 460"
+            dur="7.7s" begin="-6.30s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="5.4s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(615, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="615 -20" to="545 460"
+            dur="8.8s" begin="-6.75s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.2s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(656, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="656 -20" to="558 460"
+            dur="9.9s" begin="-7.20s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.9s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(697, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="697 -20" to="571 460"
+            dur="11.0s" begin="-7.65s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="7.7s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(738, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="738 -20" to="584 460"
+            dur="5.5s" begin="-8.10s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="3.8s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(779, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="779 -20" to="597 460"
+            dur="6.6s" begin="-8.55s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="4.6s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(820, -20) scale(0.65)">
+          <animateTransform attributeName="transform" type="translate"
+            from="820 -20" to="750 460"
+            dur="7.7s" begin="-9.00s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="5.4s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(861, -20) scale(0.87)">
+          <animateTransform attributeName="transform" type="translate"
+            from="861 -20" to="763 460"
+            dur="8.8s" begin="-9.45s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.2s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(22, -20) scale(1.09)">
+          <animateTransform attributeName="transform" type="translate"
+            from="22 -20" to="-104 460"
+            dur="9.9s" begin="-9.90s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fda4af" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="6.9s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+        <g transform="translate(63, -20) scale(1.31)">
+          <animateTransform attributeName="transform" type="translate"
+            from="63 -20" to="-91 460"
+            dur="11.0s" begin="-10.35s" repeatCount="indefinite"/>
+          <path d="M0,0 C6,-6 14,-2 12,6 C10,12 2,14 0,8 C-2,14 -10,12 -12,6 C-14,-2 -6,-6 0,0 Z"
+                fill="#fecdd3" opacity="0.88">
+            <animateTransform attributeName="transform" type="rotate"
+              from="0 0 6" to="360 0 6" dur="7.7s" repeatCount="indefinite"/>
+          </path>
+        </g>
+        
+
+    <!-- Outer Neon Border -->
+    <rect x="1" y="1" width="898" height="428" rx="20" fill="none" stroke="#f43f5e" stroke-opacity="0.55" stroke-width="1.5"/>
+  </g>
+</svg>
