@@ -81,7 +81,6 @@ def fetch_github_data():
     user = res["data"]["user"]
     repos = user["repositories"]["nodes"]
 
-    # Filter agar repositori profil (harukuntzy) tidak ikut muncul sebagai kartu proyek, kecuali hanya itu yang ada
     project_repos = [r for r in repos if r["name"].lower() != USERNAME.lower()]
     if not project_repos:
         project_repos = repos
@@ -93,6 +92,108 @@ def fetch_github_data():
         "followers": user["followers"]["totalCount"],
         "repo_list": project_repos[:6]
     }
+
+
+def generate_music_player():
+    # Equalizer 10 batang dengan animasi naik-turun variatif
+    eq_specs = [
+        (8, 26, 0.75, 0.0),
+        (14, 34, 0.62, 0.15),
+        (6, 22, 0.85, 0.30),
+        (16, 36, 0.58, 0.10),
+        (10, 30, 0.70, 0.25),
+        (18, 38, 0.64, 0.05),
+        (8, 28, 0.80, 0.20),
+        (12, 32, 0.68, 0.35),
+        (6, 24, 0.76, 0.12),
+        (10, 20, 0.88, 0.28),
+    ]
+    eq_bars = []
+    for i, (min_h, max_h, dur, delay) in enumerate(eq_specs):
+        bx = 630 + i * 11
+        base_y = 92
+        eq_bars.append(f"""
+        <rect x="{bx}" y="{base_y - min_h}" width="6" height="{min_h}" rx="3" fill="url(#eqGrad)">
+          <animate attributeName="height" values="{min_h};{max_h};{min_h}" dur="{dur:.2f}s" begin="{delay:.2f}s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="{base_y - min_h};{base_y - max_h};{base_y - min_h}" dur="{dur:.2f}s" begin="{delay:.2f}s" repeatCount="indefinite"/>
+        </rect>
+        """)
+
+    svg = f"""<svg width="900" height="136" viewBox="0 0 900 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgMusic" x1="0" y1="0" x2="900" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff1f2"/>
+      <stop offset="50%" stop-color="#ffe4e6"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+    <linearGradient id="eqGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <radialGradient id="vinylGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4c0519"/>
+      <stop offset="65%" stop-color="#881337"/>
+      <stop offset="85%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#4c0519"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="1" y="1" width="898" height="134" rx="22" fill="url(#bgMusic)" stroke="#fda4af" stroke-width="2"/>
+  <rect x="16" y="14" width="868" height="108" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#fecdd3" stroke-width="1.2"/>
+
+  <!-- Rotating Vinyl Disc -->
+  <g transform="translate(76, 68)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="5.5s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="42" fill="url(#vinylGrad)" stroke="#fb7185" stroke-width="2"/>
+      <circle cx="0" cy="0" r="33" fill="none" stroke="#fda4af" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#fda4af" stroke-opacity="0.35" stroke-width="1"/>
+      <!-- Highlight Reflection -->
+      <path d="M-28 -18 A34 34 0 0 1 -8 -33" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M28 18 A34 34 0 0 1 8 33" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <!-- Center Sakura Label -->
+      <circle cx="0" cy="0" r="15" fill="#ffe4e6" stroke="#f43f5e" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" fill="#e11d48" font-size="11">🌸</text>
+      <circle cx="0" cy="0" r="3" fill="#4c0519"/>
+    </g>
+    <!-- Tonearm Pin -->
+    <circle cx="36" cy="-32" r="5" fill="#fb7185" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M36 -32 L24 -10 L16 -4" stroke="#9f1239" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Track Info -->
+  <rect x="142" y="26" width="118" height="20" rx="10" fill="#ffe4e6" stroke="#fda4af" stroke-width="1"/>
+  <circle cx="154" cy="36" r="3.5" fill="#f43f5e">
+    <animate attributeName="opacity" values="1;0.25;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="163" y="39.5" fill="#be123c" font-family="monospace" font-weight="700" font-size="9.5">NOW PLAYING</text>
+
+  <text x="142" y="68" fill="#4c0519" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20">Suzume (feat. Toaka) — RADWIMPS</text>
+  <text x="142" y="86" fill="#9f1239" font-family="monospace" font-size="11">すずめ (feat. 十明) • Click card to listen on YouTube Music ▶</text>
+
+  <!-- Animated Progress Bar -->
+  <text x="142" y="107" fill="#be123c" font-family="monospace" font-weight="700" font-size="10">01:42</text>
+  <rect x="182" y="100" width="380" height="6" rx="3" fill="#ffe4e6"/>
+  <rect x="182" y="100" width="195" height="6" rx="3" fill="#f43f5e"/>
+  <circle cx="377" cy="103" r="4.5" fill="#ffffff" stroke="#e11d48" stroke-width="2">
+    <animate attributeName="cx" values="186;558" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <text x="572" y="107" fill="#be123c" font-family="monospace" font-weight="700" font-size="10">03:57</text>
+
+  <!-- Equalizer Box -->
+  <rect x="616" y="34" width="136" height="68" rx="14" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.2"/>
+  {"".join(eq_bars)}
+
+  <!-- Kawaii Play Button Pill -->
+  <g transform="translate(772, 43)">
+    <rect x="0" y="0" width="90" height="50" rx="25" fill="#f43f5e">
+      <animate attributeName="fill" values="#f43f5e;#ec4899;#f43f5e" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <polygon points="39,16 39,34 55,25" fill="#ffffff"/>
+  </g>
+</svg>"""
+    with open("assets/music-player.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
 
 
 def generate_stats_kawaii(data):
@@ -139,7 +240,7 @@ def generate_stats_kawaii(data):
   </text>
 
   <text x="34" y="42" fill="#9f1239" font-family="system-ui, sans-serif" font-weight="800" font-size="20">🌸 STATUS TELEMETRI // @{USERNAME}</text>
-  <text x="34" y="62" fill="#be123c" font-family="monospace" font-size="11">COZY CODING CORNER • AUTOMATION &amp; FULL-STACK</text>
+  <text x="34" y="62" fill="#be123c" font-family="monospace" font-size="11">CYBERSEC RESEARCHER • FULL-STACK &amp; OSINT</text>
 
   <g transform="translate(520, 26)">
     <rect x="0" y="0" width="72" height="24" rx="12" fill="#ffffff" stroke="#fb7185" stroke-width="1.2"/>
@@ -149,7 +250,7 @@ def generate_stats_kawaii(data):
     <rect x="154" y="0" width="76" height="24" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.2"/>
     <text x="192" y="15" text-anchor="middle" fill="#047857" font-family="monospace" font-weight="700" font-size="10">FASTAPI</text>
     <rect x="238" y="0" width="96" height="24" rx="12" fill="#ffffff" stroke="#fbbf24" stroke-width="1.2"/>
-    <text x="286" y="15" text-anchor="middle" fill="#b45309" font-family="monospace" font-weight="700" font-size="10">AUTOMATION</text>
+    <text x="286" y="15" text-anchor="middle" fill="#b45309" font-family="monospace" font-weight="700" font-size="10">SECURITY</text>
   </g>
 
   {"".join(cards)}
@@ -202,7 +303,6 @@ def generate_projects_kawaii(data):
             tags = ["Repository"]
         tags = tags[:3]
 
-        # Skor aktivitas dinamis berdasarkan urutan update terbaru & stars
         sync = min(98, max(65, 95 - idx * 5 + stars * 2))
         dash = (sync / 100.0) * circumference
         delay = idx * 0.35
@@ -265,6 +365,7 @@ def generate_projects_kawaii(data):
 if __name__ == "__main__":
     os.makedirs("assets", exist_ok=True)
     gh_data = fetch_github_data()
+    generate_music_player()
     generate_stats_kawaii(gh_data)
     generate_projects_kawaii(gh_data)
-    print("Kawaii SVGs synced with live repositories.")
+    print("Kawaii SVGs & animated music player generated.")
