@@ -3,10 +3,18 @@
 <!-- ANIMATED KAWAII CHARACTER BANNER -->
 <img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/hero-kawaii.gif" alt="Kawaii Animated Banner" width="100%" />
 
-<br/>
+<br/><br/>
 
-✨ *ようこそ！ Selamat datang di ruang santai harukuntzy!* ✨  
-<sub>Semoga harimu menyenangkan dan penuh dengan kode-kode yang lancar jaya!</sub>
+🌸 **Konnichiwa~!** Aku **Cybersecurity Researcher & Full-Stack Developer** yang hobi berburu *bug* nakal sambil ngopi manis ☕✨  
+🔍 Fokus utama: **Web Security** • **Penetration Testing** • **OSINT** • **Secure Software Development**  
+<sub><i>"Keeping the internet safe, one cute commit at a time!"</i> 🎀🛡️</sub>
+
+<br/><br/>
+
+<!-- ANIMATED KAWAII VINYL MUSIC PLAYER -->
+<a href="https://music.youtube.com/watch?v=9LW9DpmhrPE" target="_blank">
+  <img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/music-player.svg" alt="Now Playing - Suzume (feat. Toaka)" width="100%" />
+</a>
 
 <br/><br/>
 
@@ -20,7 +28,7 @@
 
 <br/>
 
-## ☕ Proyek Unggulan
+## ☕ Repositori Saya
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/projects-kawaii.svg" alt="Kawaii Projects" width="100%" />
@@ -40,5 +48,5 @@
   </a>
 
   <br/><br/>
-  <sub>Dibuat dengan cinta dan banyak kafein oleh <b>Muhammad Fakhruddin (@harukuntzy)</b> // 2026</sub>
+  <sub>Dibuat dengan cinta, kafein, dan keamanan berlapis oleh <b>@harukuntzy</b> 🌸 // 2026</sub>
 </div>
