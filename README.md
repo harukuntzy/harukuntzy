@@ -1,16 +1,26 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**harukuntzy/harukuntzy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/hero-anime.svg" alt="Neo-Tokyo Anime Banner" width="100%" />
 
-Here are some ideas to get you started:
+<br/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/telemetry-jp.svg" alt="Neural Telemetry" width="100%" />
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/harukuntzy/harukuntzy/main/assets/missions-jp.svg" alt="Active Operations" width="100%" />
+
+<br/><br/>
+
+<a href="https://github.com/harukuntzy">
+  <img src="https://img.shields.io/badge/GITHUB-@harukuntzy-090d1a?style=for-the-badge&logo=github&logoColor=34d399&labelColor=f43f5e" alt="GitHub" />
+</a>
+&nbsp;
+<a href="https://instagram.com/hallo.fahru">
+  <img src="https://img.shields.io/badge/INSTAGRAM-@hallo.fahru-090d1a?style=for-the-badge&logo=instagram&logoColor=fda4af&labelColor=e11d48" alt="Instagram" />
+</a>
+
+<br/><br/>
+<sub><b>ネオ東京 // MUHAMMAD FAKHRUDDIN (@harukuntzy)</b></sub>
+
+</div>
